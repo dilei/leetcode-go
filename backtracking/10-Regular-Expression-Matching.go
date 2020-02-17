@@ -1,4 +1,4 @@
-package leetcode_go
+package backtracking
 
 func isMatch(s string, p string) bool {
 	if len(p) == 0 {
