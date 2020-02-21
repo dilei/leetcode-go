@@ -1,4 +1,4 @@
-package leetcode_go
+package dynamic_programming
 
 import "testing"
 
@@ -7,7 +7,7 @@ func Test_longestPalindrome(t *testing.T) {
 	// if res != "aba" && res != "bab" {
 	// 	t.Error(res)
 	// }
-	res := longestPalindrome("cbbd")
+	res := longestPalindrome2("cbbd")
 	if res != "bb" {
 		t.Error(res)
 	}
