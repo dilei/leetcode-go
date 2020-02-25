@@ -23,3 +23,15 @@ func uniquePaths(m int, n int) int {
 	}
 	return dp[m-1][n-1]
 }
+
+// 一维数组
+func uniquePaths2(m, n int) int {
+	dp := make([]int, n)
+	dp[0] = 1
+	for i := 0; i < m; i++ {
+		for i := 1; i < n; i++ {
+			dp[i] += dp[i-1]
+		}
+	}
+	return dp[n-1]
+}
