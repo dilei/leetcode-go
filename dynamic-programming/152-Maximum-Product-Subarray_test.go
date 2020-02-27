@@ -1,4 +1,4 @@
-package leetcode_go
+package dynamic_programming
 
 import (
 	"testing"

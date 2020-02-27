@@ -1,4 +1,4 @@
-package leetcode_go
+package stock
 
 func largestRectangleArea(heights []int) int {
 	n := len(heights)
