@@ -20,6 +20,8 @@ func help282(res *[]string, num string, target int, path string, pos int, evel i
 	}
 
 	for i := pos; i < len(num); i++ {
+		// corner case: if current position is 0, we can only use it as a single digit number, should be 0
+		// if it is not a single digit number with leading 0, it should be considered as an invalid number
 		if pos != i && num[pos] == '0' { // num start with  0 is error num
 			break
 		}
