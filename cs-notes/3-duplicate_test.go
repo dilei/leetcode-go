@@ -1,8 +1,11 @@
-package cs-notes
+package csnotes
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
-func Test_duplicate(t *testing.T)  {
+func Test_duplicate(t *testing.T) {
 	nums := []int{2, 3, 1, 0, 2, 5}
 	res, ok := duplicate(nums)
 	fmt.Println(res, ok)
