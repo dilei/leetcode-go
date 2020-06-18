@@ -7,6 +7,7 @@ package csnotes
 //
 // Output:
 // 2
+//
 
 func duplicate(nums []int) (int, bool) {
 	l := len(nums)

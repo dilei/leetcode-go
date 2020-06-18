@@ -51,6 +51,8 @@ func helpBuildTree(node *BinaryTree, preOrder []int, inOrder []int, preStart, in
 
 		leftLen = nodePos - inStart
 		rightLen = length - (leftLen + 1)
+		// 前序遍历的第一个是root，把中序遍历分为左和右两部分
+		// 分别对左和右执行第一步操作
 		helpBuildTree(node.Left, preOrder, inOrder, preStart+1, inStart, leftLen)
 		helpBuildTree(node.Right, preOrder, inOrder, preStart+leftLen+1, nodePos+1, rightLen)
 	}

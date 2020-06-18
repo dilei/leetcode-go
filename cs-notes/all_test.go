@@ -76,3 +76,35 @@ func Test_rebuildBinaryTree(t *testing.T) {
 	inOrder := []int{9, 3, 15, 20, 7}
 	rebuildBinaryTree(preOrder, inOrder)
 }
+
+func Test_inOrderNextNode(t *testing.T) {
+	//               6
+	//      2                 7
+	// 1         4
+	//      3         5
+	root := &BinaryTree2{Val: 6}
+	node1 := &BinaryTree2{Val: 2}
+	node2 := &BinaryTree2{Val: 7}
+	node3 := &BinaryTree2{Val: 1}
+	node4 := &BinaryTree2{Val: 4}
+	node5 := &BinaryTree2{Val: 3}
+	node6 := &BinaryTree2{Val: 5}
+	root.Left = node1
+	root.Right = node2
+	node2.Next = root
+	node1.Next = root
+
+	node1.Left = node3
+	node1.Right = node4
+	node3.Next = node1
+	node4.Next = node1
+
+	node4.Left = node5
+	node4.Right = node6
+	node5.Next = node4
+	node6.Next = node4
+
+	res := inOrderNextNode(node1)
+	res2 := inOrderNextNode(node6)
+	fmt.Println(res, res2)
+}
