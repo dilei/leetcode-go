@@ -29,13 +29,13 @@ func Test_printList(t *testing.T) {
 	listNode := ListNode{1, nil}
 	listNode2 := ListNode{2, nil}
 	listNode3 := ListNode{3, nil}
-	listNode.next = &listNode2
-	listNode2.next = &listNode3
+	listNode.Next = &listNode2
+	listNode2.Next = &listNode3
 	node := &listNode
 	for node != nil {
-		fmt.Print(node.val)
+		fmt.Print(node.Val)
 		fmt.Print("\t")
-		node = node.next
+		node = node.Next
 	}
 	fmt.Println()
 
@@ -47,15 +47,15 @@ func Test_printList2(t *testing.T) {
 	listNode := ListNode{1, nil}
 	listNode2 := ListNode{2, nil}
 	listNode3 := ListNode{3, nil}
-	listNode.next = &listNode2
-	listNode2.next = &listNode3
+	listNode.Next = &listNode2
+	listNode2.Next = &listNode3
 
 	fmt.Println("before: ")
 	node := &listNode
 	for node != nil {
-		fmt.Print(node.val)
+		fmt.Print(node.Val)
 		fmt.Print("\t")
-		node = node.next
+		node = node.Next
 	}
 	fmt.Println()
 
@@ -64,9 +64,15 @@ func Test_printList2(t *testing.T) {
 	fmt.Println("after: ")
 	node = res
 	for node != nil {
-		fmt.Print(node.val)
+		fmt.Print(node.Val)
 		fmt.Print("\t")
-		node = node.next
+		node = node.Next
 	}
 	fmt.Println()
+}
+
+func Test_rebuildBinaryTree(t *testing.T) {
+	preOrder := []int{3, 9, 20, 15, 7}
+	inOrder := []int{9, 3, 15, 20, 7}
+	rebuildBinaryTree(preOrder, inOrder)
 }

@@ -6,10 +6,10 @@ import "fmt"
 
 // 递归
 func printList(listNode *ListNode) {
-	if listNode != nil && listNode.next != nil {
-		printList(listNode.next)
+	if listNode != nil && listNode.Next != nil {
+		printList(listNode.Next)
 	}
-	fmt.Print(listNode.val)
+	fmt.Print(listNode.Val)
 	fmt.Print("\t")
 }
 
@@ -18,11 +18,11 @@ func printList2(listNode *ListNode) *ListNode {
 	head := new(ListNode)
 	node := listNode
 	for node != nil {
-		tmp := node.next
-		node.next = head.next
-		head.next = node
+		tmp := node.Next
+		node.Next = head.Next
+		head.Next = node
 		node = tmp
 	}
 
-	return head.next
+	return head.Next
 }
