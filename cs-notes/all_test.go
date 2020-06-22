@@ -5,6 +5,12 @@ import (
 	"testing"
 )
 
+func Test_rectCover(t *testing.T) {
+	res := rectCover(3)
+	res2 := rectCover(5)
+	fmt.Println(res, res2)
+}
+
 func Test_duplicate(t *testing.T) {
 	nums := []int{2, 3, 1, 0, 2, 5}
 	res, ok := duplicate(nums)
