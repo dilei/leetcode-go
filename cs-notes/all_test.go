@@ -114,3 +114,15 @@ func Test_inOrderNextNode(t *testing.T) {
 	res2 := inOrderNextNode(node6)
 	fmt.Println(res, res2)
 }
+
+func Test_hasPath(t *testing.T) {
+	chars := [][]byte{
+		{'a', 'b', 't', 'g'},
+		{'c', 'f', 'c', 's'},
+		{'j', 'd', 'e', 'h'},
+	}
+
+	res := hasPath(chars, "bfce")
+	res2 := hasPath(chars, "dddd")
+	fmt.Println(res, res2)
+}
