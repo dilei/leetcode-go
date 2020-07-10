@@ -5,6 +5,17 @@ import (
 	"testing"
 )
 
+func Test_print(t *testing.T) {
+	print(2)
+}
+
+func Test_numOf1(t *testing.T) {
+	cnt := numOf1(0x11)
+	if cnt != 2 {
+		t.Error(cnt)
+	}
+}
+
 func Test_rectCover(t *testing.T) {
 	res := rectCover(3)
 	res2 := rectCover(5)
