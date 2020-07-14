@@ -5,6 +5,24 @@ import (
 	"testing"
 )
 
+func Test_deleteNode(t *testing.T) {
+	listNode := ListNode{1, nil}
+	listNode2 := ListNode{2, nil}
+	listNode3 := ListNode{3, nil}
+	listNode4 := ListNode{4, nil}
+	listNode.Next = &listNode2
+	listNode2.Next = &listNode3
+	listNode3.Next = &listNode4
+
+	listNode5 := ListNode{1, nil}
+	// head
+	deleteNode(&listNode, &listNode5)
+	// end
+	deleteNode(&listNode, &listNode4)
+	// next
+	deleteNode(&listNode, &listNode3)
+}
+
 func Test_print(t *testing.T) {
 	print(2)
 }
