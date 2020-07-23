@@ -5,6 +5,32 @@ import (
 	"testing"
 )
 
+func Test_entryNodeOfLoop(t *testing.T) {
+	listNode := ListNode{1, nil}
+	listNode2 := ListNode{2, nil}
+	listNode3 := ListNode{3, nil}
+	listNode4 := ListNode{4, nil}
+	listNode5 := ListNode{5, nil}
+	listNode6 := ListNode{6, nil}
+	listNode7 := ListNode{7, nil}
+	listNode8 := ListNode{8, nil}
+	listNode.Next = &listNode2
+	listNode2.Next = &listNode3
+	listNode3.Next = &listNode4
+	listNode4.Next = &listNode5
+	listNode5.Next = &listNode6
+	listNode6.Next = &listNode7
+	listNode7.Next = &listNode8
+	listNode8.Next = &listNode3
+	res := entryNodeOfLoop(&listNode)
+	if res == nil {
+		fmt.Println("no loop")
+	} else {
+		fmt.Println(res.Val)
+	}
+
+}
+
 func Test_deleteNode(t *testing.T) {
 	listNode := ListNode{1, nil}
 	listNode2 := ListNode{2, nil}
