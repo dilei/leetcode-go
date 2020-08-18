@@ -1,4 +1,4 @@
-package leetcode_go
+package leetcodego
 
 func isValid(s string) bool {
 	if len(s) == 0 {

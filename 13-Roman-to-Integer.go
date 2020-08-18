@@ -1,4 +1,4 @@
-package leetcode_go
+package leetcodego
 
 /*
 Symbol       Value
@@ -19,7 +19,7 @@ func romanToInt(s string) int {
 			if res >= 5 {
 				res += -1
 			} else {
-				res += 1
+				res++
 			}
 		case 'V':
 			res += 5

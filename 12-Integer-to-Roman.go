@@ -1,4 +1,4 @@
-package leetcode_go
+package leetcodego
 
 func intToRoman(num int) string {
 	M := []string{"", "M", "MM", "MMM"}
